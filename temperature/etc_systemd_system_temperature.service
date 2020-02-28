@@ -1,0 +1,12 @@
+[Unit]
+Description=Temperature service
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStartPre=
+ExecStart=/home/pi/ChickenScripts/temperature/temperature
+
+[Install]
+WantedBy=multi-user.target
